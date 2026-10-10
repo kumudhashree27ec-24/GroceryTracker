@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Verify Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f6f8;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+            border-radius: 5px;
+            font-size: 24px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #d390ec;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #a954ea;
+        }
+    </style>
+</head>
+<body>
+    <form action="/verifyitems" method="post">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <input type="submit" value="Verify Items">
+    </form>
+</body>
+</html>
