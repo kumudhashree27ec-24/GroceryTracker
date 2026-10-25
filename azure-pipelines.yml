@@ -14,7 +14,7 @@ resources:
     - container: mysql
       image: mysql:8.0
       env:
-        MYSQL_ROOT_PASSWORD: 'Kumudhab2004'
+        MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         MYSQL_DATABASE: grocery
       ports:
         - 3306:3306
@@ -36,7 +36,7 @@ jobs:
           testResultsFiles: '**/surefire-reports/TEST-*.xml'
           goals: 'clean package'
         env:
-          SPRING_DATASOURCE_URL: 'jdbc:mysql://mysql:3306/grocery'
+          SPRING_DATASOURCE_URL: 'jdbc:mysql://127.0.0.1:3306/grocery'
           SPRING_DATASOURCE_USERNAME: 'root'
-          SPRING_DATASOURCE_PASSWORD: 'Kumudhab2004'
+          SPRING_DATASOURCE_PASSWORD: ''
           SPRING_JPA_HIBERNATE_DDL_AUTO: 'update'
